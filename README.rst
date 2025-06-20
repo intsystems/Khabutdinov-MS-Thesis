@@ -15,26 +15,21 @@
 
 .. class:: center
 
-    :Название исследуемой задачи: Мое название работы
-    :Тип научной работы: M1P/НИР/CoIS
-    :Автор: Имя Отчество Фамилия
-    :Научный руководитель: степень, Фамилия Имя Отчество
-    :Научный консультант(при наличии): степень, Фамилия Имя Отчество
+    :Название исследуемой задачи: Исправление грамматических ошибок в домене низкоресурсных языков
+    :Тип научной работы: НИР
+    :Автор: Хабутдинов Ильдар Айратович
+    :Научный руководитель: к.ф-м.н, Грабовой Андрей Валериевич 
 
 Abstract
 ========
 
-Purus sit amet luctus venenatis lectus magna fringilla. Condimentum id venenatis a condimentum vitae sapien. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Eget egestas purus viverra accumsan in. Nam aliquam sem et tortor. Donec et odio pellentesque diam volutpat commodo. Odio pellentesque diam volutpat commodo sed egestas. Sit amet dictum sit amet justo. Pellentesque sit amet porttitor eget. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Quis varius quam quisque id diam vel quam elementum. Ornare lectus sit amet est placerat in. Vulputate dignissim suspendisse in est ante. Elit sed vulputate mi sit amet mauris. Egestas sed tempus urna et pharetra pharetra. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus.
+В данной работе представлены два исследования, посвящённые задаче исправления грамматических ошибок в текстах с использованием подхода Sequence Tagging. В первом исследовании описывается адаптация модели GECToR для русского языка. С учетом недостатка размеченных данных, для обучения модели был создан синтетический набор данных. Разработанная модель показала хорошие результаты на синтетических данных $F_{0.5}$ = 82.5, а также продемонстрировала способность к переносу знаний на тестовый набор данных RULEC без дополнительного обучения $F_{0.5}$ = 22.2.
+
+Во втором исследовании предлагается полностью автоматизированный, не требующий разметки подход к решению задачи исправления грамматических ошибок. Метод основан на генерации данных с использованием алгоритма Левенштейна для исправления грамматических ошибок на уровне подслов с использованием правил: keep, append, replace и delete. Подход универсален для любого языка и не требует дополнительной разметки. Применение данного метода к оригинальной модели GECToR позволило достичь конкурентных результатов на английском языке: $F_{0.5}$ = 62.4 на CoNLL-2014 и $F_{0.5}$ = 61.9 на BEA-2019, при этом не потребовалось ни аннотирования данных, ни составления словаря грамматических правил.
+
+Таким образом, совместное рассмотрение обоих исследований демонстрирует возможности применения и адаптации Sequence Tag-ging моделей как для языков с достаточным количеством размеченных данных, так и для языков, где количество таких данных ограничено.
 
 Research publications
 ===============================
-1. 
-
-Presentations at conferences on the topic of research
-================================================
-1. 
-
-Software modules developed as part of the study
-======================================================
-1. A python package *mylib* with all implementation `here <https://github.com/intsystems/ProjectTemplate/tree/master/src>`_.
-2. A code with all experiment visualisation `here <https://github.comintsystems/ProjectTemplate/blob/master/code/main.ipynb>`_. Can use `colab <http://colab.research.google.com/github/intsystems/ProjectTemplate/blob/master/code/main.ipynb>`_.
+1. RuGECToR: Rule-Based Neural Network Model for Russian Language Grammatical Error Correction
+2. Automatic Spelling Correction for Russian: Multiple Error Approach
